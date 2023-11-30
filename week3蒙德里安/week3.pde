@@ -17,9 +17,7 @@ void setup() {
 void draw() {
   fillRadomcolor();
   delay(50);
-  
 }
-
 
 void modifyState(){
   // 随机修改少量小方格为 true状态
@@ -53,10 +51,6 @@ void modifyColor() {
 }
       
     
-      
-      
-      
- 
 void fillRadomcolor(){
  for (int x = 0; x < cols; x++) {
     for (int y = 0; y < rows; y++) {
