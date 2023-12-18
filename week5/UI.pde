@@ -1,8 +1,3 @@
-/**
- * [UI description]
- * @Author   bit2atom
- * @DateTime 2022-07-29T10:10:26+0800
- */
 import controlP5.*;
 import peasy.*;
 
@@ -43,7 +38,7 @@ void UI() {
   slider.addSlider("rotateRange")//圆柱体轴向扭曲弧度值
     .setPosition(20, 140)
     .setSize(sliderWidth, sliderHeight)
-    .setRange(0, PI*16)
+    .setRange(0, PI*8)
     .setValue(PI)
     ;
 
@@ -73,13 +68,7 @@ void UI() {
   slider.setAutoDraw(false);
 }
 
-/**
- * [showNormal description]
- * @Author   bit2atom
- * @DateTime 2022-10-20T21:18:36+0800
- * @param    {[type]}                 boolean theFlag       [toggle status: on / off]
- * @return   {[type]}                         [该toggle用于控制法线的显示]
- */
+
 void showNormal(boolean theFlag) {
   if (theFlag==true) {
     showNormalLine = true;
@@ -88,13 +77,7 @@ void showNormal(boolean theFlag) {
   }
 }
 
-/**
- * [controlEvent description]
- * @Author   bit2atom
- * @DateTime 2022-07-29T10:09:57+0800
- * @param    {[type]}                 ControlEvent theEvent      [当对应的控件实践发生时运行相关函数（此处为setSystem()）]
- * @return   {[type]}                              [description]
- */
+
 void controlEvent(ControlEvent theEvent) {
   if (theEvent.isFrom(slider.getController("heightSection")) ||
     theEvent.isFrom(slider.getController("laySection")) ||
