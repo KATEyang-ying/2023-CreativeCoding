@@ -1,12 +1,3 @@
-/*
-* @Author: bit2atom | SJTU-ChinaGold DesignIntelligence
-* @Date:   2022-10-20 21:13:48
-* @brief:  
-* @Last Modified by:   lymanzhang
-* @Last Modified time: 2022-10-20 21:23:05
-* @E-mail: zhanglliqun@gmail.com
-* @detail: 
-*/
 class Triangle {
   PVector[] triVertex;//三角形三个点向量
   PVector[] contourVertex;//三角形三个内轮廓向量
@@ -40,14 +31,7 @@ class Triangle {
       }
     }
 
-
-  /**
-   * [calcuNormal description]
-   * @Author   bit2atom
-   * @DateTime 2022-10-20T21:22:23+0800
-   * @return   {[PVector]}                 [计算三角形法线向量]
-   */
-   
+//[计算三角形法线向量] 
   PVector calcuNormal() {
     PVector p1p2 = PVector.sub(triVertex[1], triVertex[0]);
     PVector p1p3 = PVector.sub(triVertex[2], triVertex[0]);
@@ -55,14 +39,7 @@ class Triangle {
     return norm;
   }
 
-
-
-  /**
-   * [drawTriangle description]
-   * @Author   bit2atom
-   * @DateTime 2022-10-20T21:22:48+0800
-   * @return   {[void]}                 [绘制三角形]
-   */
+//[绘制三角形]
   void drawTriangle() {
     beginShape(TRIANGLE);
     stroke(0);
@@ -74,12 +51,7 @@ class Triangle {
     endShape();
   }
 
-  /**
-   * [ct description]
-   * @Author   bit2atom
-   * @DateTime 2022-10-20T21:22:54+0800
-   * @return   {[PVector]}                 [计算三角形中心点向量]
-   */
+//[计算三角形中心点向量]
   PVector ct() {
     float cx = 0;
     float cy = 0;
@@ -99,12 +71,8 @@ class Triangle {
     return cv;
   }
 
-  /**
-   * [displayNormal description]
-   * @Author   bit2atom
-   * @DateTime 2022-10-20T21:23:02+0800
-   * @return   {[void]}                 [绘制三角形法线]
-   */
+  
+//[绘制三角形法线]
   void displayNormal() {
     PVector nm = new PVector(normal.x, normal.y, normal.z);
     nm.normalize();//法线向量归一化
